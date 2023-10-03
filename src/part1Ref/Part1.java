@@ -10,9 +10,6 @@ class Dota2Players {
         this.mmr = mmr;
     }
 
-    static void increasePlayerMmr(Dota2Players player, int amount) {
-        player.increaseMmr(amount);
-    }
 
     public String getName() {
         return name;
@@ -21,6 +18,7 @@ class Dota2Players {
     public int getMmr() {
         return mmr;
     }
+
     public void increaseMmr(int amount) {
         mmr += amount;
     }
@@ -36,15 +34,17 @@ public class Part1 {
         Dota2Players player2 = player;
 
 
-        player1.increaseMmr(100);
-        player2.increaseMmr(50);
-
+        player1.increaseMmr(40);
 
         System.out.println(player1.getName() + "'s Rank: " + player1.getMmr());
+
+        player2.increaseMmr(60);
+
+
         System.out.println(player2.getName() + "'s Rank: " + player2.getMmr());
 
 
-        player.increaseMmr(200);
+        player.increaseMmr(150);
 
 
         System.out.println(player.getName() + "'s Rank: " + player.getMmr());
